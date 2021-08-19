@@ -120,7 +120,7 @@ void Write(int *p, int size) //Definition of Write(int*, int) funcion for writin
     }
 }
 
-int Delete(int *p, int size, int value) //Definition of Write(int*, int, int) funcion to perform deletion
+int Delete(int *p, int size, int value) //Definition of Delete(int*, int, int) funcion to perform deletion
 {
     int pos = -1; //Variable to get index of element to be deleted
 
