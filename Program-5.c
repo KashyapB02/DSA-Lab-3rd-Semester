@@ -4,12 +4,12 @@
 
 /* Header files */
 
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /* Function declaration for Writing and Reading to the array */
 
-void Traverse (int*, int);  //Declaration of function for traversing the array
+void Traverse(int *, int); //Declaration of function for traversing the array
 
 /* Starting of main */
 
@@ -21,13 +21,13 @@ int main()
     int size;
 
     /* Asking user for total size of array */
-    
+
     printf("Enter size of array to be initialised --> ");
     scanf("%d", &size);
 
-    int *p = (int*) calloc (size, sizeof(int)); //Memory allocation for 'size' elements of array
+    int *p = (int *)calloc(size, sizeof(int)); //Memory allocation for 'size' elements of array
 
-    if(p == NULL)   //To check if memory is allocated or not. in case memmory is not alloacated, p is NULL
+    if (p == NULL) //To check if memory is allocated or not. in case memmory is not alloacated, p is NULL
     {
         printf("\nError in creating Memory.. ! Returning... !");
         return 0;
@@ -44,7 +44,7 @@ int main()
     printf("Input %d elements:\n", size);
     printf("\n-->\t");
 
-    for(int i = 0; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
         scanf("%d", (p + i));
     }
@@ -55,7 +55,7 @@ int main()
     printf("Traversing the array:\n");
     printf("\n");
 
-    Traverse (p, size); //Function call to Traverse(int*, int)
+    Traverse(p, size); //Function call to Traverse(int*, int)
     printf("\n");
 
     printf("\n");
@@ -64,7 +64,7 @@ int main()
 
 /* Function declaration for Writing and Reading to the array */
 
-void Traverse (int *p, int size)    //Definition of Traverse(int*, int) function for traversing the array
+void Traverse(int *p, int size) //Definition of Traverse(int*, int) function for traversing the array
 {
     for (int i = 0; i < size; i++)
     {
