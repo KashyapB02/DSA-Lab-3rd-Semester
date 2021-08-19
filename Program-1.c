@@ -1,13 +1,17 @@
 /*
-    --> Insertion in array.
+    --> Insertion in array
 
         --> At beginning
         --> At end
         --> At any index in between start and end
 */
 
+/* Header files */
+
 #include<stdio.h>
 #include<stdlib.h>
+
+/* Starting of main() */
 
 int main()
 {

@@ -7,8 +7,12 @@
     to an array.
 */
 
+/* Header files */
+
 #include<stdio.h>
 #include<stdlib.h>
+
+/* Starting of main() */
 
 int main()
 {
@@ -57,6 +61,8 @@ int main()
         printf("%d\t", *(p + i));
     }
 
+    /* End of program */
+    
     printf("\n");
     return 0;
 }
