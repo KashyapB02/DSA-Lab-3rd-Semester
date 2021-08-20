@@ -1,0 +1,10 @@
+Program name and their topics:
+
+Program-1.c --> Insertion in array
+Program-2.c --> Program to implement reading & writing to an array
+Program-3.c --> Program to pass array to a function
+Program-4.c --> Program to perform deletion in an array
+Program-5.c --> Program to traverse an array
+Program-6.c --> Program tp find highest and lowest element in an array
+Program-7.c --> Program to implement linear search
+Program-8.c --> Program to implement binary search
