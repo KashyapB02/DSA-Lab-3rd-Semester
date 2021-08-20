@@ -61,7 +61,7 @@ int main()
     return 0;
 }
 
-/* Function declaration for Writing and Reading to the array */
+/* Function definition for Writing and Reading to the array */
 
 void Read (int *p, int size)    //Definition of Read(int*, int) function for reading from the array
 {

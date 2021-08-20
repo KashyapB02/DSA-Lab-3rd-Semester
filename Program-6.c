@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Function declaration for Writing and Reading to the array */
+/* Function declarations */
 
 void Read(int *, int);       //Declaration of function for reading from the array
 void Write(int *, int);      //Declaration of the function for writing to the array
@@ -69,7 +69,7 @@ int main()
     return 0;
 }
 
-/* Function declaration for Writing and Reading to the array */
+/* Function definitions */
 
 void Read(int *p, int size) //Definition of Read(int*, int) function for reading from the array
 {
@@ -87,7 +87,7 @@ void Write(int *p, int size) //Definition of Write(int*, int) funcion for writin
     }
 }
 
-int Highest(int *p, int size) //Definition of Highest(int*, int) funcion to perform deletion
+int Highest(int *p, int size) //Definition of Highest(int*, int) funcion to find highest element in the array
 {
     int max = *(p);
 
@@ -102,7 +102,7 @@ int Highest(int *p, int size) //Definition of Highest(int*, int) funcion to perf
     return max;
 }
 
-int Lowest(int *p, int size) //Definition of Lowest(int*, int) funcion to perform deletion
+int Lowest(int *p, int size) //Definition of Lowest(int*, int) funcion to find lowest element in the array
 {
     int small = *(p);
 

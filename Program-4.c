@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Function declaration for Writing and Reading to the array */
+/* Function declaration for Writing, Reading and Deletion operation */
 
 void Read(int *, int);       //Declaration of function for reading from the array
 void Write(int *, int);      //Declaration of the function for writing to the array
@@ -102,7 +102,7 @@ int main()
     return 0;
 }
 
-/* Function declaration for Writing and Reading to the array */
+/* Function definition for Writing, Reading and Deletion operation */
 
 void Read(int *p, int size) //Definition of Read(int*, int) function for reading from the array
 {

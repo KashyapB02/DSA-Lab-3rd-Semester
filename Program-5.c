@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Function declaration for Writing and Reading to the array */
+/* Function declaration for Traversing the array */
 
 void Traverse(int *, int); //Declaration of function for traversing the array
 
@@ -49,7 +49,7 @@ int main()
         scanf("%d", (p + i));
     }
 
-    /* Displaying array entered by the user (Reading from the array) */
+    /* Displaying array entered by the user (Traversing the array) */
 
     printf("\n");
     printf("Traversing the array:\n");
@@ -62,7 +62,7 @@ int main()
     return 0;
 }
 
-/* Function declaration for Writing and Reading to the array */
+/* Function definition for Writing and Reading to the array */
 
 void Traverse(int *p, int size) //Definition of Traverse(int*, int) function for traversing the array
 {

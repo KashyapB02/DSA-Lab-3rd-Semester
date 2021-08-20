@@ -7,7 +7,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-/* Function declaration */
+/* Function declarations */
 
 int Linear_Search (int*, int, int);    //Function to implement linear search
 void Scan_Array (int*, int);    //Function to take user input to the array
@@ -95,7 +95,7 @@ int main()
     return 0;
 }
 
-/* Function declaration for Writing and Reading to the array */
+/* Function definitions */
 
 /* Definition of Scan_Array(int, int) funcion to take user input to the array */
 
