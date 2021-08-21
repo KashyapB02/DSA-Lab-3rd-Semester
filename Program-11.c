@@ -5,7 +5,7 @@
 /* Header files */
 
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> //Header file for calloc() function
 
 /* Function declarations */
 
@@ -57,13 +57,13 @@ int main()
     printf("\nSquaring Matrix... ");
     system("pause");
 
-    int *Result = Square(Matrix, R, C); //Function calling to square entered matrices
+    int *Result = Square(Matrix, R, C); //Function calling to square entered matrix
 
     printf("\n");
     printf("Square of the matrix is -->\n");
     printf("\n");
 
-    ShowMatrix(Result, R, C); //Function calling to perform Multiplication of entered matrices
+    ShowMatrix(Result, R, C); //Function calling to display square of input matrix
 
     /* End of program */
 
