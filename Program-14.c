@@ -25,7 +25,7 @@ int main()
     system("cls");
     system("color 06");
 
-    printf("!!...... Square of Matrix .....!!\n");
+    printf("!!...... Upper Traungular Matrix .....!!\n");
     printf("\n");
 
     int R, C; //Variables to store dimension of matrix
