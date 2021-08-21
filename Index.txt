@@ -10,3 +10,5 @@ Program-7.c     --> Program to implement linear search
 Program-8.c     --> Program to implement binary search
 Program-9.c     --> Program to perform addition of two matrices
 Program-10.c    --> Program to perform multiplication of two matrices
+Program-11.c    --> Program to display square of a matrix
+Program-12.c    --> Program to display square of each element of a matrix
