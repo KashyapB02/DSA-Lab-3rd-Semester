@@ -12,3 +12,6 @@ Program-9.c     --> Program to perform addition of two matrices
 Program-10.c    --> Program to perform multiplication of two matrices
 Program-11.c    --> Program to display square of a matrix
 Program-12.c    --> Program to display square of each element of a matrix
+Program-13.c    --> Program to calculate transpose of a matrix
+Program-14.c    --> Program to find weather a matrix is upper triangular or not
+Program-15.c    --> Program to determine symmetrical matrix.
