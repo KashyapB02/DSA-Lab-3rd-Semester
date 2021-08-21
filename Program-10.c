@@ -82,13 +82,13 @@ int main()
     printf("\nMultiplying Matrices... ");
     system("pause");
 
-    int *Product = Multiplication(Matrix_1, Matrix_2, R1, C1, C2);
+    int *Product = Multiplication(Matrix_1, Matrix_2, R1, C1, C2);  //Function calling to perform Multiplication of entered matrices
 
     printf("\n");
     printf("Product of the matrices is -->\n");
     printf("\n");
 
-    ShowMatrix(Product, R1, C2); //Function calling to perform Multiplication of entered matrices
+    ShowMatrix(Product, R1, C2); //Function calling for displaying result of multiplication of matrices
 
     /* End of program */
 
@@ -157,7 +157,7 @@ void ShowMatrix(int *M, int R, int C)
 
 int *Multiplication(int *M1, int *M2, int R1, int C1, int C2)
 {
-    int *P = (int *)calloc((R1, C2), sizeof(int));
+    int *P = (int *)calloc((R1 * C2), sizeof(int));
 
     for (int i = 0; i < R1; i++)
     {
