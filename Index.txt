@@ -17,3 +17,4 @@ Program-14.c    --> Program to find whether a matrix is upper triangular or not
 Program-15.c    --> Program to determine symmetrical matrix.
 Program-16.c    --> Program to find the sum of the element above & below the diagonals elements.
 Program-17.c    --> Program to find average of the elements of rows.
+Program-18.c    --> Program to understand Sparse Array (Creating, Displaying, Addition & Subtraction).
