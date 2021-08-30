@@ -18,3 +18,7 @@ Program-15.c    --> Program to determine symmetrical matrix.
 Program-16.c    --> Program to find the sum of the element above & below the diagonals elements.
 Program-17.c    --> Program to find average of the elements of rows.
 Program-18.c    --> Program to understand Sparse Array (Creating, Displaying, Addition & Subtraction).
+Program-19.c    --> Program for creating a new Node and inserting at the beginning of a Singly Linked List.
+Program-20.c    --> Program for creating a new Node and inserting at the end of a Singly Linked List.
+Program-21.c    --> Program to creat a Singly Linked List and perform deletion from the beginning of the list.
+Program-22.c    --> Program to creat a Singly Linked List and perform deletion from the end of the list.
