@@ -22,3 +22,6 @@ Program-19.c    --> Program for creating a new Node and inserting at the beginni
 Program-20.c    --> Program for creating a new Node and inserting at the end of a Singly Linked List.
 Program-21.c    --> Program to creat a Singly Linked List and perform deletion from the beginning of the list.
 Program-22.c    --> Program to creat a Singly Linked List and perform deletion from the end of the list.
+Program-23.c    --> Program to creat a Stack using array and perform Push operation to it.
+Program-24.c    --> Program to creat a Stack using array and perform Pop operation from it.
+Program-25.c    --> Program to creat a dummy Stack using array and traverse it.
