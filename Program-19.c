@@ -5,15 +5,22 @@
 /* Header files */
 
 #include <stdio.h>
-#include <stdlib.h> // Headerfile for 'malloc()' function
+#include <stdlib.h>     // Header file for 'malloc()' function
+#include<ctype.h>		// Header file for 'toupper()' function
 
 /* Structure declaration for Nodes of singly linked list */
 
 struct NODE
 {
-    int info;          // Variable to store information for the node
-    struct NODE *Next; // Pointer variable for pointing to the next node
-};
+    int info;               // Variable to store information for the node
+    struct NODE *Next;      // Pointer variable for pointing to the next node
+}*start;
+
+/* Function declarations */
+
+struct NODE* create_node();         // Function declaration to create and return new node
+void add_node(struct NODE*);        // Function declaration to add new node to the list
+void display_list();                // Function declaration to display list
 
 /* Starting of main() */
 
@@ -21,130 +28,104 @@ int main()
 {
     system("cls");
 
-    struct NODE *start, *new_node, *previous_node, *display; // Variables declaration to perform creation of a new node and insertion operation at the begining of singly linked list
+    start = NULL;       // Initialize the start pointer with NULL.
 
-    start = NULL; // Initialize the start pointer with NULL.
+    printf("Initial list:\n");
+	display_list();			// Function calling to display list
 
-    int total_node; // Variable to store total number of nodes to be inserted to the singly linked list
+	printf("\n");
+	printf("Creating list... ");
+	system("pause");
 
-    printf("Input total number of nodes --> ");
-    scanf("%d", &(total_node));
+	char choice;
 
-    if (!total_node)
-    {
-        printf("\nNo node created... No insertion to the list...\n");
-        printf("\nDisplaying final list... ");
-        system("pause");
+    /* Loop for creating and adding new node in the list */
 
-        printf("\n");
+    do
+	{
+		printf("\nCreate node:\n");
+		printf("\n");
 
-        if (!start) // If start is NULL, no node exists. List is empty
-        {
-            printf("List is empty.. Nothing to display...\n");
-            printf("Returning...\n");
+		add_node(create_node());		// Function callings to create & add new node in the list
+		printf("\n");
 
-            printf("\n");
-            return 0;
-        }
+		printf("The list is now:\n");
+		display_list();					// Function calling to display list
 
-        display = start; // Assign start to display for displaying the list
+		printf("\n");
+		printf("\nWant to add more node to the list? (Y/N) --> ");
+		scanf(" %c", &choice);
 
-        while (display) // Loop to display list
-        {
-            printf("%d --> ", display->info); // Display the current node
-            display = display->Next;          // Make display point to next node
-        }
+		choice = toupper(choice);
+		printf("\n");
 
-        printf("!\n"); // '!' symbol shows end of the list
-    }
+	} while (choice == 'Y');	// Checking choice of user
+	
+	printf("\n");
+	printf("\nDisplaying final list:\n");
 
-    printf("\nInitial List -->\n");
+	display_list();		// Function calling to display final list
 
-    display = start; // Assign start to display for displaying the list
+	printf("\n");
+	return 0;
 
-    while (display) // Loop to display initial list
-    {
-        printf("%d --> ", display->info); // Display current node
-        display = display->Next;          // Make display point to next node
-    }
-    printf("!\n"); // '!' symbol shows end of the list
+	/* End of program */
+}
 
-    printf("\nInput informations for each node:\n");
-    printf("\n");
+/* Function definitions */
 
-    int information; // Variable to store information input from the user
+struct NODE* create_node()      // Function definition to create and return new node
+{
+    // Creating a new node to add into the list	
+	struct NODE *new_node = (struct NODE*)malloc(sizeof(struct NODE));
+	
+	printf("Input data for the item --> ");
+	scanf("%d", &(new_node->info));		// Data input for new node
 
-    for (int i = 1; i <= total_node; i++) // Loop for creating and inserting new nodes in the list
-    {
-        new_node = (struct NODE *)malloc(sizeof(struct NODE)); // Creating a new node for inserting into list
+	new_node->Next = NULL;				// Initializing 'Next' pointer with NULL
 
-        if (new_node) // Condition to check if node is created successfully
-        {
-            printf("NODE %d --> ", i);
-            scanf("%d", &(information));
+	return new_node;		// Returning new node
+}
 
-            new_node->info = information; // Putting information in new node
-            new_node->Next = NULL;        // Initializing 'Next' pointer with nULL
+void add_node(struct NODE* new_node)        // Function definition to add new node to the list
+{
+    if(!start)		// Condition to check if list is empty or not. If list is empty, start is NULL
+	{
+		start = new_node;		// If list is empty, new node is starting node
+		
+		printf("\n");
+		return;
+	}
 
-            if (!(start)) // Condition to check if list is empty or not. If list is empty, start is NULL
-            {
-                start = new_node; // If list is empty, new_node is starting node
-            }
-            else // If start is not NULL, list is not empty
-            {
-                previous_node = start;          // Save previous value of start
-                start = new_node;               // Assign new node to start
-                new_node->Next = previous_node; // Make new node point to previous start
-            }
+	/* If start is not NULL, list is not empty */
 
-            printf("\nUpdated list is:\n");
+	new_node->Next = start;     // Make new node point to previous start
+	start = new_node;           // Assign new node to start
 
-            display = start; // Assign start to display for displaying the list
+	printf("\n");	
+	return;
+}
 
-            while (display) // Loop to display updated list after each insertion
-            {
-                printf("%d --> ", display->info); // Display current node
-                display = display->Next;          // Make display point to next node
-            }
-            printf("!\n"); // '!' symbol shows end of the list
+void display_list()
+{
+    if(!start)			// If start is NULL, no node exists. List is empty
+	{
+		printf("!");	// '!' symbol shows NULL
 
-            printf("\n");
-        }
-        else
-        {
-            printf("\nNode cannot be created... Returning... !");
-            printf("\n");
-            return 0;
-        }
-    }
+		printf("\n");
+		return;
+	}
+	
+	struct NODE *temp = start;
+	
+	while(temp)			// Loop to display list
+	{
+		printf("%d --> ", (temp->info));		// Display the current node
+		temp = temp->Next;		// Move to next node
+	}
 
-    printf("All nodes successfully inserted to list... ");
-    system("pause");
+	printf("!");		// '!' symbol shows NULL
 
-    printf("\nDisplaying final list... ");
-    system("pause");
-
-    printf("\n");
-
-    if (!start) // If start is NULL, no node exists. List is empty
-    {
-        printf("List is empty.. Nothing to display...\n");
-        printf("Returning...\n");
-
-        printf("\n");
-        return 0;
-    }
-
-    display = start; // Assign start to display for displaying the list
-
-    while (display) // Loop to display list
-    {
-        printf("%d --> ", display->info); // Display the current node
-        display = display->Next;          // Make display point to next node
-    }
-
-    printf("!\n"); // '!' symbol shows end of the list
-
-    printf("\n");
-    return 0;
+	printf("\n");
+	return;
 }
