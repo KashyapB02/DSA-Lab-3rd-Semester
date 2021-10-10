@@ -25,3 +25,5 @@ Program-22.c    --> Program to creat a Singly Linked List and perform deletion f
 Program-23.c    --> Program to creat a Stack using array and perform Push operation to it.
 Program-24.c    --> Program to creat a Stack using array and perform Pop operation from it.
 Program-25.c    --> Program to creat a dummy Stack using array and traverse it.
+Program-26.C    --> Program to create a Doubly Linked List.
+Program-28.c    --> Program to implement linear queue using array.
