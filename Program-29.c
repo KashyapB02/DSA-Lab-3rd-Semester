@@ -181,11 +181,3 @@ int leaves(Tree *root)              // Function to count total number of leaves 
 
     return leaf;            // Return total number of leaves
 }
-
-/*
-
-
-
-
-
-*/
