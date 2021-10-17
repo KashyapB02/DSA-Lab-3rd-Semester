@@ -28,3 +28,6 @@ Program-25.c    --> Program to creat a dummy Stack using array and traverse it.
 Program-26.C    --> Program to create a Doubly Linked List.
 Program-28.c    --> Program to implement linear queue using array.
 Program-29.c    --> Program to find number of node & leaves in the tree.
+Program-30.c    --> Program to sort the elements of an array using Insertion sort.
+Program-31.c    --> Program to sort the elements of an array using Bubble sort.
+Program-32.c    --> Program to sort the elements of an array using Selection sort.
