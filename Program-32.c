@@ -1,5 +1,5 @@
 /*
-    --> Program to sort the elements of an array using Bubble sort.
+    --> Program to sort the elements of an array using Selection sort.
 */
 
 /* Header Files */
@@ -9,9 +9,9 @@
 
 /* Function Declarations */
 
-void BubbleSort(int *, int); // Function to perform Bubble Sort
-void PrintArray(int *, int); // Function to print array
-void ScanArray(int *, int);  // Function to input array
+void SelectionSort(int *, int); // Function to perform selction Sort
+void PrintArray(int *, int);    // Function to print array
+void ScanArray(int *, int);     // Function to input array
 
 /* Start of main() */
 
@@ -45,7 +45,7 @@ int main()
     system("pause");
 
     printf("\n");
-    BubbleSort(Array, size); // Function call to sort array elements using bubble sort
+    SelectionSort(Array, size); // Function call to sort array elements using selction sort
 
     printf("\n");
     printf("The sorted array is as shown below:\n");
@@ -60,25 +60,31 @@ int main()
 
 /* Function definitions */
 
-void BubbleSort(int *Array, int size) // Function to perform bubble sort
+void SelectionSort(int *Array, int size) // Function to perform selction sort
 {
-    int swap;
+    int small, position, swap;
 
     // Outer loop to iterate all elements of array
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < (size - 1); i++)
     {
-        // Inner loop iterate and compare each element with next element
-        for (int j = 0; j < ((size - 1) - i); j++)
+        small = Array[i]; // Assuming current element as smallest element
+        position = i;     // Storing position of current smallest element
+
+        // Inner loop to iterate all the elements & compare with current smallest element.
+        for (int j = (i + 1); j < size; j++)
         {
-            // If current element is greater than the next element, settle current elememt downwards
-            if (Array[j] > Array[j + 1])
+            // Comparing current element with smallest element
+            if (Array[j] < small)
             {
-                // Settle greater element downwards by swapping the values
-                swap = Array[j];
-                Array[j] = Array[j + 1];
-                Array[j + 1] = swap;
+                small = Array[j]; // If current element is smaller, assign current element to 'small'
+                position = j;     // Storing position of current smallest element
             }
         }
+
+        // Swapping current element with the smallest element in unsorted array
+        swap = Array[i];
+        Array[i] = Array[position];
+        Array[position] = swap;
 
         /* Printing array after each iteration of comparision */
 
