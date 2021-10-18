@@ -31,3 +31,4 @@ Program-29.c    --> Program to find number of node & leaves in the tree.
 Program-30.c    --> Program to sort the elements of an array using Insertion sort.
 Program-31.c    --> Program to sort the elements of an array using Bubble sort.
 Program-32.c    --> Program to sort the elements of an array using Selection sort.
+Program-33.c    --> Program to sort the elements of an array using Quick sort.
