@@ -32,3 +32,7 @@ Program-30.c    --> Program to sort the elements of an array using Insertion sor
 Program-31.c    --> Program to sort the elements of an array using Bubble sort.
 Program-32.c    --> Program to sort the elements of an array using Selection sort.
 Program-33.c    --> Program to sort the elements of an array using Quick sort.
+Program-34.c    --> Program to create an undirected graph using adjecency list.
+Program-35.c    --> Program to implement undirected graph traversal Depth First Search (DFS) Algorithm.
+Program-36.c    --> Program to sort the elements of an array using merge sort.
+Program-37.c    --> Program to implement graph traversal Breath First Search Algorithm.
